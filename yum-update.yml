@@ -1,4 +1,5 @@
 - name: Enable EPEL repository and update all servers
+  hosts: all
   order: sorted
   become: True
   become_user: root
