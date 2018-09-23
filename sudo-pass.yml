@@ -1,0 +1,13 @@
+- name: Enable EPEL repository and update all servers
+  hosts: all
+  order: sorted
+  become: True
+  become_user: root
+  tasks:
+    - name: Edit sudoers file
+      lineinfile:
+         path: /etc/sudoers
+         state: present
+         regexp: '^%wheel\s'
+         line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+         validate: 'visudo -cf %s'
