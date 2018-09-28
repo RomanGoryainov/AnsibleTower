@@ -1,0 +1,16 @@
+- name: Install TSS 7.11 server
+  hosts: centos-node3
+  order: sorted
+  become: True
+  tasks:
+   - name: upgrade all packages
+     yum:
+      name: '*'
+      state: latest
+#   - name: Copy TSS RPM package
+      copy:
+        src: /etc/ansible/files/tss/tss-7.11.0.x86_64.rpm
+        dest: /tmp
+        mode: "0750"
+#   - name: Install TSS RPM package
+
