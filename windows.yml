@@ -1,0 +1,7 @@
+---
+- name: Windows servers
+  hosts: all
+  gather_facts: yes
+  tasks:
+   - name: windows get credentials
+     win_whoami:
