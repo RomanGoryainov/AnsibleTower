@@ -5,3 +5,10 @@
   tasks:
    - name: windows get credentials
      win_whoami:
+#
+   - name: create group
+     win_group:
+       name: Developers
+       description: Developers Group created by Ansible Tower
+       state: present
+#
