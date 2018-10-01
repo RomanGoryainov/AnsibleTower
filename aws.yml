@@ -7,7 +7,7 @@
      yum:
       name: "{{ item }}"
       with_items:
-        - python2-boto3
-        - python2-botocore
+       - python2-boto3
+       - python2-botocore
    - name: Get facts about VPC
      ec2_vpc_net_facts:
