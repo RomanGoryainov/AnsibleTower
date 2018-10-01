@@ -1,0 +1,7 @@
+- name: Get facts about AWS
+  hosts: all
+  order: sorted
+  become: True
+  tasks:
+   - name: Get facts about VPC
+   - ec2_vpc_net_facts:
