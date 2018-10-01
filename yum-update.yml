@@ -1,5 +1,5 @@
 - name: Enable EPEL repository and update all servers
-  hosts: all
+  hosts: localhost
   order: sorted
   become: True
   tasks:
